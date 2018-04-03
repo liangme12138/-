@@ -9,8 +9,7 @@ import qs from 'qs';
 import Url from './baseUrl'
 
 var baseUrl = Url.url;
-// var baseUrl = 'http://10.3.136.49:555/';
-// var baseUrl = 'http://10.3.136.55:999/';
+
 
 var fliterUrl = function(url){
     if(url.startsWith('http')){
@@ -41,7 +40,7 @@ export default {
         return new Promise((reslove,reject)=>{
                  axios({
                     url:fliterUrl(opt.url),
-                    data: qs.stringify(opt.parmas),
+                    data: qs.stringify(opt.params),
                     method: 'post',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'

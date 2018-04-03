@@ -3,11 +3,10 @@ import VueRouter from 'vue-router';
 
 import LoginComponent from '../components/login/login.vue'
 import root from '../components/RootComponent/RootComponent.vue'
-import service from '../components/ServerComponent/ServerComponent.vue'
-import order from '../components/orderComponent/order.vue'
-import goods from '../components/goodsComponent/goods.vue'
+import Administrator from '../components/Administrator/Administrator'
+import Company from '../components/company/company'
 
-import user from '../components/userComponent/user.vue'
+
 Vue.use(VueRouter);
 
 var router = new VueRouter({
@@ -22,24 +21,13 @@ var router = new VueRouter({
             component: root,
             children:[
                 {
-                    path: '/service',
-                    name: 'service',
-                    component: service,
-                },
-                {
-                    path: '/order',
-                    name: 'order',
-                    component: order,
+                    path: '/company',
+                    name:'company',
+                    component: Company
                 },{
-                    path: '/goods',
-                    name: 'goods',
-                    component: goods,
-                    
-                },
-                {
-                    path: '/user',
-                    name: 'user',
-                    component: user,
+                    path: '/admin',
+                    name: 'admin',
+                    component: Administrator
                 }
             ]
         }

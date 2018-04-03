@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import store from './vuex/store'
 
 import Element from 'element-ui'
+import $ from 'jquery'
 import 'element-ui/lib/theme-chalk/index.css'
 import './css/base.css'
 Vue.use(Element)
